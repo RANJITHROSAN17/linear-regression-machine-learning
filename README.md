@@ -75,3 +75,7 @@ docs/*.png                  generated plots
 - Add polynomial features and compare with the linear fit using cross-validation
 - Try a real salary dataset with multiple predictors (education, role, city) → multiple regression
 - Residual plots and a check of the regression assumptions
+
+## Maintainer
+
+**[Ranjith Rosan](https://github.com/RANJITHROSAN17)** maintains this synthetic-data linear regression teaching project. The example is intended for learning, not real-world compensation decisions.
