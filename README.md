@@ -6,6 +6,10 @@ as a reference for the standard train/test/evaluate workflow.
 
 ![Fitted line on the test set](docs/test_set.png)
 
+## What success looks like
+
+Run the quickstart to print held-out metrics and regenerate the plots in `docs/`; run the tests separately to check the workflow. This is a **synthetic-data teaching example**, not a salary valuation service. The CSV does not establish a currency, geography, occupation or fair compensation policy; do not use the fitted line for hiring or pay decisions.
+
 ## Results
 
 Trained on 2/3 of the data, evaluated on the held-out 1/3 (`random_state=0`):
@@ -16,7 +20,7 @@ Trained on 2/3 of the data, evaluated on the held-out 1/3 (`random_state=0`):
 | R² (test) | **0.9985** |
 | MAE (test) | ≈ 936 |
 
-Interpretation: each additional year of experience adds about ₹/$ 3 339 to salary in this dataset,
+Interpretation: each additional year of experience adds about 3 339 dataset salary units in this dataset,
 with a starting salary of roughly 1 958. The relationship is almost perfectly linear, which tells you
 this is a teaching dataset (see below) rather than real-world HR data.
 
@@ -38,7 +42,7 @@ The point of the project is the workflow, not the numbers.
 git clone https://github.com/RANJITHROSAN17/linear-regression-machine-learning.git
 cd linear-regression-machine-learning
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt pytest
 
 python salary_prediction.py          # prints metrics, saves plots to docs/
 python salary_prediction.py --show   # also opens the plots
